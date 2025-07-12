@@ -1,11 +1,11 @@
 -- ~/.config/nvim/lua/plugins/colorscheme.lua
 
 return {
-  { "rebelot/kanagawa.nvim" },
+  { "ellisonleao/gruvbox.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa-dragon",
+      colorscheme = "gruvbox",
     },
   },
 }
