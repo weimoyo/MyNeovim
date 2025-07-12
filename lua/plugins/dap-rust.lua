@@ -109,20 +109,11 @@ return {
     -- 4. 快捷键 (Keymaps)
     -- =================================================================
 
-    -- 基础调试快捷键 (使用 <Leader>d 前缀)
-    vim.keymap.set("n", "<Leader>db", dap.toggle_breakpoint, { desc = "[DAP] 切换断点" })
-    vim.keymap.set("n", "<Leader>dc", dap.continue, { desc = "[DAP] 继续" })
-    vim.keymap.set("n", "<Leader>do", dap.step_over, { desc = "[DAP] 单步跳过" })
-    vim.keymap.set("n", "<Leader>di", dap.step_into, { desc = "[DAP] 单步进入" })
-    vim.keymap.set("n", "<Leader>du", dap.step_out, { desc = "[DAP] 单步跳出" })
     vim.keymap.set("n", "<Leader>dr", dap.repl.open, { desc = "[DAP] 打开REPL" })
     vim.keymap.set("n", "<Leader>dl", dap.run_last, { desc = "[DAP] 运行上次配置" })
     vim.keymap.set({ "n", "v" }, "<Leader>dK", function()
       dapui.eval()
     end, { desc = "[DAP] 查看变量值" })
-    vim.keymap.set("n", "<Leader>dt", dap.terminate, { desc = "[DAP] 终止调试" }) -- 新增：终止调试
-
-    -- 传统 IDE 风格的 F 功能键 (冗余快捷键)
     vim.keymap.set("n", "<F5>", dap.continue, { desc = "[DAP] 继续 (F5)" })
     vim.keymap.set("n", "<F6>", dap.pause, { desc = "[DAP] 暂停 (F6)" }) -- 新增：暂停功能
     vim.keymap.set("n", "<F7>", dap.step_out, { desc = "[DAP] 单步跳出 (F7)" })
@@ -131,7 +122,7 @@ return {
     vim.keymap.set("n", "<F10>", dap.step_into, { desc = "[DAP] 单步进入 (F10)" })
     vim.keymap.set("n", "<F12>", function()
       dapui.toggle()
-    end, { desc = "[DAP] 切换UI (F11)" }) -- 新增：方便地显示/隐藏UI
+    end, { desc = "[DAP] 切换UI (F12)" }) -- 新增：方便地显示/隐藏UI
 
     -- Shift + F* 快捷键
     vim.keymap.set("n", "<S-F5>", dap.terminate, { desc = "[DAP] 终止调试 (Shift+F5)" }) -- 对应VSCode的Shift+F5
