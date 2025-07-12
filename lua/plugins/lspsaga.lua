@@ -14,6 +14,11 @@ return {
         max_height = 0.6,
         left_width = 0.2,
       },
+      lightbulb = {
+        enable = true,
+        sign = true,
+        virtual_text = false,
+      },
     })
   end,
   dependencies = {
